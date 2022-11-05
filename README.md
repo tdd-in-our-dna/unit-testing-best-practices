@@ -28,3 +28,19 @@ increasingly positive ROI) by applying the testing best practices.
 - One Assert Per Test
 - Arrange-Act-Assert
 - Naming Convention
+
+## Session-7:
+## Session-8:
+
+## Session-9: Creating Simplified assertions for problems faced globally
+
+Money Converter is an app that helps get the USD value from your INR. Money has 2 attributes- amount, currency
+
+MoneyTestV1, MoneyTestV2 & MoneyTestV3 show progressively improving tests.
+1. V1 being complicated assertion where you have to repeat the same lines of code multiple times.
+2. V2 is slightly better since the assertions are inline, it comes with problem of multiple tests creation for amount, even though amount and currency are always co-existent.
+3. V3 is the simplified way of testing Money. The assertion in testUtils.kt is a global level method and now can be used by any test across the project which increases readability, ease of use and has usage similar to standard library
+
+#### Unit Testing Best Practices reviewed:
+- Inline setup
+- Simplified assertions

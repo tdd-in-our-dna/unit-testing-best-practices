@@ -1,6 +1,5 @@
 package session9
 
-import java.math.BigDecimal
 import kotlin.test.assertEquals
 import org.junit.jupiter.api.Test
 import session9.model.Currency
