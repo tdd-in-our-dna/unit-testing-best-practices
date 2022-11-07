@@ -1,13 +1,22 @@
 # unit-testing-best-practices
 
-Tests are just as important as production code, but they are different. Through trial and error we have learnt & 
+Tests are just as important as production code, but they are different. Through trial and error we have learnt &
 continue to learn better testing practices but much of that knowledge is not yet widespread. Through the code here which
 can be understood in tandem with our sessions, we try to make an effort to spread this knowledge.
 
 ## Session-1:
-## Session-2:
+
+## Session-2: Tiny universe principle. State verification over Behaviour verification
+
+Customer controller comes with an API that saves customers by validating them CustomerControllerTestV1 and
+CustomerControllerTestV2 show how tests can improve progressively, when they run independently. Doing State verification
+over behaviour verification is better since Behaviour of code(Structure of the code) is bound to change or refactor
+whereas state will remain as long as the business requirements stay the same.
+
 ## Session-3:
+
 ## Session-4:
+
 ## Session-5:
 
 ## Session-6: Relating ROI with Unit Testing Best Practices
@@ -19,6 +28,7 @@ FurnitureTestV1, FurnitureTestV2 & FurnitureTestV3 show progressively improving 
 increasingly positive ROI) by applying the testing best practices.
 
 #### Unit Testing Best Practices reviewed:
+
 - Tiny Universe
 - Inline Setup
 - Replace loop with individual tests
@@ -30,6 +40,7 @@ increasingly positive ROI) by applying the testing best practices.
 - Naming Convention
 
 ## Session-7:
+
 ## Session-8:
 
 ## Session-9: Creating Simplified assertions for problems faced globally
@@ -37,10 +48,14 @@ increasingly positive ROI) by applying the testing best practices.
 Money Converter is an app that helps get the USD value from your INR. Money has 2 attributes- amount, currency
 
 MoneyTestV1, MoneyTestV2 & MoneyTestV3 show progressively improving tests.
+
 1. V1 being complicated assertion where you have to repeat the same lines of code multiple times.
-2. V2 is slightly better since the assertions are inline, it comes with problem of multiple tests creation for amount, even though amount and currency are always co-existent.
-3. V3 is the simplified way of testing Money. The assertion in testUtils.kt is a global level method and now can be used by any test across the project which increases readability, ease of use and has usage similar to standard library
+2. V2 is slightly better since the assertions are inline, it comes with problem of multiple tests creation for amount,
+   even though amount and currency are always co-existent.
+3. V3 is the simplified way of testing Money. The assertion in testUtils.kt is a global level method and now can be used
+   by any test across the project which increases readability, ease of use and has usage similar to standard library
 
 #### Unit Testing Best Practices reviewed:
+
 - Inline setup
 - Simplified assertions
