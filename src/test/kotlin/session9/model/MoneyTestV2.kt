@@ -1,10 +1,9 @@
-package session9
+package session9.model
 
 import kotlin.test.assertEquals
 import org.junit.jupiter.api.Test
 import session9.model.Currency.INR
 import session9.model.Currency.USD
-import session9.model.Money
 
 class MoneyTestV2 {
 

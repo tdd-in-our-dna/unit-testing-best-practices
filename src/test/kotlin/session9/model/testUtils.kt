@@ -1,8 +1,6 @@
-package session9
+package session9.model
 
 import kotlin.test.assertEquals
-import session9.model.Currency
-import session9.model.Money
 
 
 fun assertMoney(
