@@ -16,6 +16,8 @@ repositories {
 }
 
 dependencies {
+    implementation("io.projectreactor:reactor-core:3.4.24")
+    testImplementation("io.projectreactor:reactor-test:3.4.24")
     testImplementation(kotlin("test"))
     testImplementation("org.mockito","mockito-core","2.1.0")
     testImplementation("io.mockk:mockk:1.10.0")
