@@ -1,24 +1,29 @@
 package session9.model
 
-import kotlin.test.assertEquals
+import java.math.BigDecimal
 import org.junit.jupiter.api.Test
 import session9.model.Currency.INR
-import session9.model.Currency.USD
 
 class MoneyTestV2 {
 
     @Test
-    fun `should convert the amount of Money from INR to USD`() {
-        val indianRupee = Money(1200.00, INR)
+    fun `should convert Money from INR to USD`() {
+        val indianRupee = Money(BigDecimal(1200.00), INR)
         val usDollars = indianRupee.toUsDollars()
-        assertEquals(14.46, usDollars.amount)
+        assertUSD(14.00, usDollars.amount.toDouble())
     }
 
     @Test
-    fun `should convert the currency Money from INR to USD`() {
-        val indianRupee = Money(1200.00, INR)
+    fun `should convert small amount from INR to USD `() {
+        val indianRupee = Money(BigDecimal(200.00), INR)
         val usDollars = indianRupee.toUsDollars()
-        assertEquals(USD, usDollars.currency)
+        assertUSD(2.00, usDollars.amount.toDouble())
     }
 
+    @Test
+    fun `should convert large amount from INR to USD `() {
+        val indianRupee = Money(BigDecimal(10000.00), INR)
+        val usDollars = indianRupee.toUsDollars()
+        assertUSD(120.00, usDollars.amount.toDouble())
+    }
 }
