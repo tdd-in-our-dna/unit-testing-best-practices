@@ -1,6 +1,7 @@
 package session9.assertions
 
 import io.kotlintest.assertSoftly
+import io.kotlintest.shouldBe
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import reactor.test.StepVerifier
@@ -21,7 +22,8 @@ fun <T> Flux<T>.assertNextElements(vararg elements: T) {
             .expectSubscription()
 
         for (element in elements) {
-            step.expectNext(element)
+            val assertion = { actual: T -> actual shouldBe element}
+            step.assertNext(assertion)
         }
 
         step.verifyComplete()
