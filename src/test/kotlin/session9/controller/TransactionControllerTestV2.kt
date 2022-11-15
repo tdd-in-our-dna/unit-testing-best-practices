@@ -7,7 +7,6 @@ import java.time.LocalDate
 import java.time.ZoneId
 import org.junit.jupiter.api.Test
 import session9.model.Transaction
-import session9.model.TransactionType
 import session9.model.TransactionType.DEBIT
 
 class TransactionControllerTestV2 {

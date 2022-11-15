@@ -2,7 +2,6 @@ package session9.controller
 
 import java.time.Clock
 import java.time.LocalDate
-import java.time.ZoneId
 import session9.model.Transaction
 import session9.model.TransactionType
 
@@ -14,7 +13,7 @@ class TransactionControllerV2(private val clock: Clock) {
             amountToWithDraw,
             remainingAmount,
             TransactionType.DEBIT,
-            LocalDate.ofInstant(clock.instant(), ZoneId.systemDefault())
+            LocalDate.now(clock)
         )
     }
 }
