@@ -1,4 +1,4 @@
-package session9
+package session9.assertions
 
 import java.math.BigDecimal
 import kotlin.test.assertEquals

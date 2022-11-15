@@ -1,4 +1,4 @@
-package session9.reactive
+package session9.assertions
 
 import io.kotlintest.assertSoftly
 import reactor.core.publisher.Flux

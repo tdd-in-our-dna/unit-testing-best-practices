@@ -1,9 +1,10 @@
-package session9.exception
+package session9.assertions
 
 import io.kotlintest.assertSoftly
 import io.kotlintest.fail
 import io.kotlintest.matchers.throwable.shouldHaveMessage
 import io.kotlintest.shouldBe
+import session9.exception.MyException
 
 fun <T> assertException(clazz: Class<T>, message: String, block: () -> Unit) {
     var wasExceptionThrown = false

@@ -1,6 +1,8 @@
 package session9.exception
 
 import org.junit.jupiter.api.Test
+import session9.assertions.assertException
+import session9.assertions.assertMyException
 
 class MyClassTestV2 {
 

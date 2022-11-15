@@ -1,6 +1,10 @@
 package session9.reactive
 
 import org.junit.jupiter.api.Test
+import session9.assertions.assertErrorMessage
+import session9.assertions.assertNextCount
+import session9.assertions.assertNextElement
+import session9.assertions.assertNextElements
 
 class ReactiveServiceTestV2 {
 
