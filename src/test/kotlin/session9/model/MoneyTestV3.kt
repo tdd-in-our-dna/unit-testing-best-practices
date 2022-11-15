@@ -2,6 +2,7 @@ package session9.model
 
 import java.math.BigDecimal
 import org.junit.jupiter.api.Test
+import session9.assertConvertedUSD
 import session9.model.Currency.INR
 
 class MoneyTestV3 {

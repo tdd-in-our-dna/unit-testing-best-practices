@@ -1,7 +1,9 @@
-package session9.model
+package session9
 
 import java.math.BigDecimal
 import kotlin.test.assertEquals
+import session9.model.Currency
+import session9.model.Money
 
 fun assertUSD(
     expectedAmount: Double,
