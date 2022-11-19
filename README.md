@@ -43,19 +43,26 @@ increasingly positive ROI) by applying the testing best practices.
 
 ## Session-8:
 
-## Session-9: Creating Simplified assertions for problems faced globally
+## Session-9: Creating Simplified assertions and handling time interactions in tests
+### Simplified assertions
+- Create custom assertions if there were several assertions that focused on the same type of assertions or have similar patterns or duplication that’s beginning to appear pointing towards a custom assertion.
+- If you find yourself repeating any idea in multiple test cases, (then and only then) look for a higher level concept that can be extracted and reused.
+- Such custom assertions should be created on a global level instead of per test class level, hence solving problems globally .
+- Assert Last: Write single line assertion as the last line of the test
 
-Money Converter is an app that helps get the USD value from your INR. Money has 2 attributes- amount, currency
+We cover two scenarios for Simplified Assertions:
+1. Exception Handling
+2. Reactive code or equivalent library code with complex assertions
 
-MoneyTestV1, MoneyTestV2 & MoneyTestV3 show progressively improving tests.
-
-1. V1 being complicated assertion where you have to repeat the same lines of code multiple times.
-2. V2 is slightly better since the assertions are inline, it comes with problem of multiple tests creation for amount,
-   even though amount and currency are always co-existent.
-3. V3 is the simplified way of testing Money. The assertion in testUtils.kt is a global level method and now can be used
-   by any test across the project which increases readability, ease of use and has usage similar to standard library
+### Time interactions
+- Use constructor dependency Injection to inject clocks(or equivalent timeserver) for controllers, services etc.
+Tests can then inject clock with fixed time.
+- Use parameter injection when injecting a clock is not a feasible solution(eg. domain models). In the production code,
+the invoking controller/service which has a clock can inject the date as the method parameter.
+The tests for domain model can inject the date object directly.
 
 #### Unit Testing Best Practices reviewed:
-
-- Inline setup
 - Simplified assertions
+- Handling Time Interactions
+- Assert Last
+- Sensible Defaults in test data setup eg. EPOCH
