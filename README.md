@@ -61,6 +61,17 @@ Tests can then inject clock with fixed time.
 the invoking controller/service which has a clock can inject the date as the method parameter.
 The tests for domain model can inject the date object directly.
 
+## Session-10: 90% Solitary and 10% Sociable unit tests
+
+Weather Forecasting App is used to show weather conditions for given location.
+
+WeatherForecastTestV1, WeatherForecastTestV2 show different versions of tests.
+1. WeatherForecastTestV1 has unit tests which are Solitary (Mockist Approach)
+2. WeatherForecastTestV2 has unit tests which are Sociable (Classist Approach)
+3. WeatherForecastTestV3 has unit tests with around 90% Solitary and 10% Sociable
+
+Unit Tests in combination of Solitary & Sociable provide more robustness and reliability.
+
 #### Unit Testing Best Practices reviewed:
 - Simplified assertions
 - Handling Time Interactions

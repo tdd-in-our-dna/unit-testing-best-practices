@@ -1,0 +1,3 @@
+package session10.solitarySociable.weatherForecasting.annotation
+
+annotation class Sociable
