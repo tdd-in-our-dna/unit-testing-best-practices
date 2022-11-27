@@ -12,7 +12,7 @@ import session10.solitarySociable.weatherForecasting.domain.ClimateType.*
 // Solitary Unit Tests (Mockist Approach)
 class WeatherForecastTestV1 {
     @Test
-    fun `should return SUNNY weather condition for location with latitude greater than minus90 and less than minus45`() {
+    fun `should return SUNNY weather condition for location with latitude greater than minus 90 and less than minus 45`() {
         val locationEngine = mockk<LocationEngine>()
         val weatherForecast = WeatherForecast(locationEngine)
         val expectedLocation = buildLocation(
@@ -33,7 +33,7 @@ class WeatherForecastTestV1 {
     }
 
     @Test
-    fun `should return WARM weather condition for location with latitude greater than minus45 and less than 0`() {
+    fun `should return WARM weather condition for location with latitude greater than minus 45 and less than 0`() {
         val locationEngine = mockk<LocationEngine>()
         val weatherForecast = WeatherForecast(locationEngine)
         val expectedLocation = buildLocation(
@@ -54,7 +54,7 @@ class WeatherForecastTestV1 {
     }
 
     @Test
-    fun `should return COOL weather condition for location with latitude greater than 0 and less than plus45`() {
+    fun `should return COOL weather condition for location with latitude greater than 0 and less than plus 45`() {
         val locationEngine = mockk<LocationEngine>()
         val weatherForecast = WeatherForecast(locationEngine)
         val expectedLocation = buildLocation(
@@ -75,7 +75,7 @@ class WeatherForecastTestV1 {
     }
 
     @Test
-    fun `should return COLD weather condition for location with latitude greater than plus45 and less than plus90`() {
+    fun `should return COLD weather condition for location with latitude greater than plus 45 and less than plus 90`() {
         val locationEngine = mockk<LocationEngine>()
         val weatherForecast = WeatherForecast(locationEngine)
         val expectedLocation = buildLocation(

@@ -8,7 +8,7 @@ import session10.solitarySociable.weatherForecasting.exception.InvalidLocationCo
 
 class LocationEngineTest {
     @Test
-    fun `should return valid location value for latitude greater than minus 180 and less than plus 180`() {
+    fun `should return valid northern hemisphere location value for latitude greater than minus 180 and less than plus 180`() {
         val locationEngine = LocationEngine()
         val expectedLocation = buildLocation(
             locationName = "northern_hemisphere_-50.12_34.12",
@@ -17,20 +17,6 @@ class LocationEngineTest {
         )
 
         val actualLocation = locationEngine.getLocationFromCoordinates(-50.12, 34.12)
-
-        assertEquals(expectedLocation, actualLocation)
-    }
-
-    @Test
-    fun `should return valid southern hemisphere location value for longitude greater than minus 90 and less than 0`() {
-        val locationEngine = LocationEngine()
-        val expectedLocation = buildLocation(
-            locationName = "southern_hemisphere_23.12_-34.12",
-            latitude = 23.12,
-            longitude = -34.12
-        )
-
-        val actualLocation = locationEngine.getLocationFromCoordinates(23.12, -34.12)
 
         assertEquals(expectedLocation, actualLocation)
     }
@@ -45,6 +31,20 @@ class LocationEngineTest {
         )
 
         val actualLocation = locationEngine.getLocationFromCoordinates(23.12, 34.12)
+
+        assertEquals(expectedLocation, actualLocation)
+    }
+
+    @Test
+    fun `should return valid southern hemisphere location value for longitude greater than minus 90 and less than 0`() {
+        val locationEngine = LocationEngine()
+        val expectedLocation = buildLocation(
+            locationName = "southern_hemisphere_23.12_-34.12",
+            latitude = 23.12,
+            longitude = -34.12
+        )
+
+        val actualLocation = locationEngine.getLocationFromCoordinates(23.12, -34.12)
 
         assertEquals(expectedLocation, actualLocation)
     }

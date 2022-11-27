@@ -63,9 +63,9 @@ The tests for domain model can inject the date object directly.
 
 ## Session-10: 90% Solitary and 10% Sociable unit tests
 
-Weather Forecasting App is used to show weather conditions for given location.
+Weather Forecasting App is used to show weather conditions for given location coordinates.
 
-WeatherForecastTestV1, WeatherForecastTestV2 show different versions of tests.
+WeatherForecastTestV1, WeatherForecastTestV2 & WeatherForecastTestV3 show different versions of tests as follows:-
 1. WeatherForecastTestV1 has unit tests which are Solitary (Mockist Approach)
 2. WeatherForecastTestV2 has unit tests which are Sociable (Classist Approach)
 3. WeatherForecastTestV3 has unit tests with around 90% Solitary and 10% Sociable
