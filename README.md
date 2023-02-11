@@ -72,6 +72,16 @@ WeatherForecastTestV1, WeatherForecastTestV2 & WeatherForecastTestV3 show differ
 
 Unit Tests in combination of Solitary & Sociable provide more robustness and reliability.
 
+## Session-11: Test Doubles- Mocks and Stubs
+
+Furniture Rent App is used to rent furniture available in the system. 
+
+It exposes a REST API to rent furniture with following contract:-
+POST /furniture/{id}/rent
+-> 200 ok - When furniture is available for rent
+-> 422 unprocessable entity - When furniture is not available for rent
+-> 400 bad request - When id is not valid integer
+
 #### Unit Testing Best Practices reviewed:
 - Simplified assertions
 - Handling Time Interactions
