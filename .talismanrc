@@ -3,4 +3,8 @@ fileignoreconfig:
   checksum: 1c0890fb2bacbc4a0377d47bffdc21ca02d428d8e08b4261a32e7d0990e0da81
 - filename: src/main/resources/data.sql
   checksum: e0f714074363bee51aa6290ed4fded119bae21b0465a4d6fab16011d502d0227
+- filename: src/test/resources/application-test.properties
+  checksum: 0c51126f0bfa5c878799daeaa92038faddea57317bc192bcf9a7b71e8ffdd52b
+- filename: src/test/resources/data.sql
+  checksum: 300dc555cd23081bd98cb34f329a1df52ed54736e042a4b73dc649b220aac77e
 version: "1.0"
