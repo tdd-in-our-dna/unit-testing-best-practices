@@ -1,7 +1,7 @@
 package session11.mocksAndStubs.controller
 
+import org.springframework.http.HttpStatus.NOT_FOUND
 import org.springframework.http.HttpStatus.OK
-import org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
@@ -19,7 +19,7 @@ class FurnitureRentController(
             furnitureRentService.rent(furnitureId)
             ResponseEntity("Furniture with id- $furnitureId rented successfully!", OK)
         } catch (FurnitureUnavailableException: FurnitureUnavailableException) {
-            ResponseEntity("Furniture with id- $furnitureId unavailable for rent!", UNPROCESSABLE_ENTITY)
+            ResponseEntity("Furniture with id- $furnitureId unavailable for rent!", NOT_FOUND)
         }
     }
 }

@@ -43,7 +43,7 @@ class FurnitureRentControllerIT {
         val requestBuilder = MockMvcRequestBuilders.post("/furniture/5/rent").accept(APPLICATION_JSON)
         val result = mockMvc.perform(requestBuilder).andReturn()
 
-        result.response.status shouldBe 422
+        result.response.status shouldBe 404
     }
 
     @Test
