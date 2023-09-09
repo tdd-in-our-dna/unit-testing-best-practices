@@ -33,6 +33,8 @@ dependencies {
     testImplementation("io.kotlintest:kotlintest-assertions:3.4.2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("com.h2database:h2")
+    testImplementation("org.amshove.kluent:kluent:1.64")
+
 }
 
 tasks.test {

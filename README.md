@@ -4,7 +4,11 @@ Tests are just as important as production code, but they are different. Through 
 continue to learn better testing practices but much of that knowledge is not yet widespread. Through the code here which
 can be understood in tandem with our sessions, we try to make an effort to spread this knowledge.
 
-## Session-1:
+## Session-1: Basic Idea about how to do TDD in right way and why it is important
+
+ISBN controller just calls ISBN service to validate if given ISBN is valid or not.  
+ISBN service has the business logic of validation.
+In comments steps are given which are to be followed while doing actual TDD.
 
 ## Session-2: Tiny universe principle. State verification over Behaviour verification
 
